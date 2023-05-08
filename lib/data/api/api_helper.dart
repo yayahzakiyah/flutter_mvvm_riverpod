@@ -31,12 +31,12 @@ class ApiHelper {
     }
   }
 
-  static Future<dynamic> delete(String path, Map<String, dynamic> data) async {
+  static Future<dynamic> delete(String path) async {
     try {
-      final response = await _dio.delete(path, data: data);
+      final response = await _dio.delete(path);
       return response;
     } on DioError catch (e) {
       return e;
     }
-  } 
+  }
 }
